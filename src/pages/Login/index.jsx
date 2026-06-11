@@ -50,7 +50,7 @@ export default function Login() {
       <div className={styles.card}>
         <div className={styles.top}>
           <span className={styles.logoIcon}>🛒</span>
-          <h1 className={styles.title}>ShopAdmin</h1>
+          <h1 className={styles.title}>Loja 34</h1>
           <p className={styles.subtitle}>Entre na sua conta para continuar</p>
         </div>
 
@@ -68,7 +68,7 @@ export default function Login() {
               <input
                 {...register('username')}
                 className={`${styles.input} ${errors.username ? styles.inputError : ''}`}
-                placeholder="Digite seu usuário"
+                placeholder="Digite seu usuário: mor_2314"
                 autoComplete="username"
               />
             </div>
@@ -85,7 +85,7 @@ export default function Login() {
                 {...register('password')}
                 type="password"
                 className={`${styles.input} ${errors.password ? styles.inputError : ''}`}
-                placeholder="Digite sua senha"
+                placeholder="Digite sua senha: 83r5^_"
                 autoComplete="current-password"
               />
             </div>
@@ -107,10 +107,7 @@ export default function Login() {
           <strong>Dica:</strong> usuário <code>mor_2314</code> / senha <code>83r5^_</code>
         </p>
 
-        <p className={styles.registerLink}>
-          Não tem conta?{' '}
-          <Link to="/register" className={styles.registerAnchor}>Criar uma conta</Link>
-        </p>
+       
       </div>
     </div>
   );
