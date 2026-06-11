@@ -1,7 +1,6 @@
 /* styles/global.css */
 @import './variables.module.css';
 @import './dark.module.css';
-@import './styles.module.css';
 
 *, *::before, *::after {
   box-sizing: border-box;
