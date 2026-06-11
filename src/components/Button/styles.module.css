@@ -1,0 +1,47 @@
+
+/* Estilo base de todos os botões do componente */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+
+.default {
+  background: var(--brand-primary);
+  color: #fff;
+}
+
+.default:hover {
+  background: #5a52d5; 
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Variante: secondary */
+.secondary {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.secondary:hover {
+  background: var(--border-color);
+}
+
+/* Variante: danger */
+.danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.danger:hover {
+  background: #dc2626;
+}
