@@ -44,18 +44,20 @@ export default function ProductCard({ product, onDelete }) {
 
       <div className={styles.actions}>
         <button
-          className={`btn btn-secondary ${styles.actionBtn}`}
+          className={`${styles.actionBtn} ${styles.editBtn}`}
           onClick={() => navigate(`/products/edit/${product.id}`)}
-        >
-          <FiEdit2 /> Editar
-        </button>
-        <button
-          className={`btn btn-danger ${styles.actionBtn}`}
+          aria-label={`Editar produto ${product.title}`}
+          >
+            <FiEdit2 /> Editar
+          </button>
+          <button
+          className={`${styles.actionBtn} ${styles.deleteBtn}`}
           onClick={() => onDelete(product.id)}
-        >
-          <FiTrash2 /> Excluir
-        </button>
-      </div>
+          aria-label={`Excluir produto ${product.title}`}
+          >
+            <FiTrash2 /> Excluir
+          </button>
+          </div>
     </div>
   );
 }
