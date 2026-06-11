@@ -38,20 +38,19 @@ function Protected({ children }) {
 export default function AppRoutes() {
   return (
     <Routes>
-      {/* Rotas públicas */}
+  
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      {/* Dashboard */}
+   
       <Route path="/" element={<Protected><Products /></Protected>} />
 
-      {/* Produtos */}
+  
       <Route path="/products" element={<Protected><Products /></Protected>} />
       <Route path="/products/add" element={<Protected><AddProduct /></Protected>} />
       <Route path="/products/edit/:id" element={<Protected><EditProduct /></Protected>} />
       <Route path="/products/:id" element={<Protected><ProductDetails /></Protected>} />
 
-      {/* Usuários */}
       <Route path="/users" element={<Protected><Users /></Protected>} />
       <Route path="/users/register" element={<Protected><Register /></Protected>} />
       <Route path="/users/:id" element={<Protected><UserDetails /></Protected>} />
