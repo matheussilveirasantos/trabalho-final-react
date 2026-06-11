@@ -13,7 +13,7 @@ export default function Header({ onToggleSidebar }) {
         <FiMenu />
       </button>
 
-      <span className={styles.brand}>🛒 ShopAdmin</span>
+      <span className={styles.brand}>🛒 Loja 34</span>
 
       <div className={styles.actions}>
         <button className={styles.iconBtn} onClick={toggleTheme} title="Alternar tema">

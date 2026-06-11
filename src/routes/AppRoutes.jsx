@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
-import Home from '../pages/Home';
 import Products from '../pages/Products';
 import ProductDetails from '../pages/ProductDetails';
 import AddProduct from '../pages/AddProduct';
@@ -44,7 +43,7 @@ export default function AppRoutes() {
       <Route path="/register" element={<Register />} />
 
       {/* Dashboard */}
-      <Route path="/" element={<Protected><Home /></Protected>} />
+      <Route path="/" element={<Protected><Products /></Protected>} />
 
       {/* Produtos */}
       <Route path="/products" element={<Protected><Products /></Protected>} />
@@ -61,3 +60,5 @@ export default function AppRoutes() {
     </Routes>
   );
 }
+
+
