@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { getProducts, getCategories } from '../../services/api';
-import { FiShoppingBag, FiTag, FiTrendingUp, FiPlusCircle } from 'react-icons/fi';
+import { FiShoppingBag, FiTag, FiTrendingUp, FiPlusCircle, FiUsers } from 'react-icons/fi';
 import Loader from '../../components/Loader';
 import styles from './styles.module.css';
 
@@ -84,6 +84,9 @@ export default function Home() {
           </button>
           <button className="btn btn-secondary" onClick={() => navigate('/products')}>
             <FiShoppingBag /> Ver Todos Produtos
+          </button>
+          <button className="btn btn-secondary" onClick={() => navigate('/users')}>
+            <FiUsers /> Ver Usuários
           </button>
         </div>
       </div>

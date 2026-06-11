@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -105,6 +105,11 @@ export default function Login() {
 
         <p className={styles.hint}>
           <strong>Dica:</strong> usuário <code>mor_2314</code> / senha <code>83r5^_</code>
+        </p>
+
+        <p className={styles.registerLink}>
+          Não tem conta?{' '}
+          <Link to="/register" className={styles.registerAnchor}>Criar uma conta</Link>
         </p>
       </div>
     </div>

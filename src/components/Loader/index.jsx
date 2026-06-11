@@ -1,10 +1,10 @@
-import './Loader.css';
+import styles from './styles.module.css';
 
-export default function Loader({ size = 'md', text = 'Carregando...' }) {
+export default function Loader({ text = 'Carregando...' }) {
   return (
-    <div className={`loader-wrapper loader-${size}`}>
-      <div className="loader-spinner" />
-      {text && <p className="loader-text">{text}</p>}
+    <div className={styles.wrapper}>
+      <div className={styles.spinner} />
+      {text && <p className={styles.text}>{text}</p>}
     </div>
   );
 }
