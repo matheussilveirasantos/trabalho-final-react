@@ -1,4 +1,4 @@
-import styles from "./Button.module.css";
+import styles from "./styles.module.css";
 // Componente de botão genérico para uso com propries
 export default function Button({ children, onClick, variant = "default" }) {
   return (
