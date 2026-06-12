@@ -14,7 +14,7 @@ export default function Sidebar({ open, onClose }) {
       {open && <div className={styles.overlay} onClick={onClose} />}
       <aside className={`${styles.sidebar} ${open ? styles.open : ''}`}>
         <div className={styles.sidebarHeader}>
-          <span className={styles.brand}>🛒 Loja 34</span>
+          <span className={styles.brand}>🛍️ Loja 34</span>
           <button className={styles.closeBtn} onClick={onClose}>
             <FiX />
           </button>
