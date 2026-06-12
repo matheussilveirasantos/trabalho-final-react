@@ -1,47 +1,55 @@
-
-/* Estilo base de todos os botões do componente */
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 20px;
-  border-radius: var(--radius-sm);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
   font-size: 14px;
   font-weight: 600;
   transition: all var(--transition);
   cursor: pointer;
-  border: none;
+  border: 2px solid transparent;
 }
 
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 .default {
-  background: var(--brand-primary);
+  background-color: transparent;
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.default:hover:not(:disabled) {
+  background-color: var(--brand-primary);
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
-.default:hover {
-  background: #5a52d5; 
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-/* Variante: secondary */
 .secondary {
-  background: var(--bg-elevated);
+  background-color: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border-color);
+  border-color: var(--border-color);
 }
 
-.secondary:hover {
-  background: var(--border-color);
+.secondary:hover:not(:disabled) {
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
 }
 
-/* Variante: danger */
 .danger {
-  background: var(--color-danger);
-  color: #fff;
+  background-color: transparent;
+  color: var(--color-danger);
+  border-color: var(--color-danger);
 }
 
-.danger:hover {
-  background: #dc2626;
+.danger:hover:not(:disabled) {
+  background-color: var(--color-danger);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }

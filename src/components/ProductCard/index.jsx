@@ -1,17 +1,18 @@
-import { useNavigate } from 'react-router-dom';
-import { FiEdit2, FiTrash2, FiStar } from 'react-icons/fi';
-import styles from './styles.module.css';
+import { useNavigate } from "react-router-dom";
+import { FiEdit2, FiTrash2, FiStar } from "react-icons/fi";
+import Button from "../Button/Button"; // <-- Novo Import aqui
+import styles from "./styles.module.css";
 
 export default function ProductCard({ product, onDelete }) {
   const navigate = useNavigate();
 
-  const categoryClass = product.category?.includes('electronics')
-    ? 'badge-electronics'
-    : product.category?.includes('jewelery')
-    ? 'badge-jewelery'
-    : product.category?.includes("men's")
-    ? 'badge-men'
-    : 'badge-women';
+  const categoryClass = product.category?.includes("electronics")
+    ? "badge-electronics"
+    : product.category?.includes("jewelery")
+      ? "badge-jewelery"
+      : product.category?.includes("men's")
+        ? "badge-men"
+        : "badge-women";
 
   return (
     <div className={styles.card}>
@@ -43,21 +44,21 @@ export default function ProductCard({ product, onDelete }) {
       </div>
 
       <div className={styles.actions}>
-        <button
-          className={`${styles.actionBtn} ${styles.editBtn}`}
+        <Button
+          variant="default" /* <-- AQUI! Mude de "secondary" para "default" */
           onClick={() => navigate(`/products/edit/${product.id}`)}
           aria-label={`Editar produto ${product.title}`}
-          >
-            <FiEdit2 /> Editar
-          </button>
-          <button
-          className={`${styles.actionBtn} ${styles.deleteBtn}`}
+        >
+          <FiEdit2 /> Editar
+        </Button>
+        <Button
+          variant="danger"
           onClick={() => onDelete(product.id)}
           aria-label={`Excluir produto ${product.title}`}
-          >
-            <FiTrash2 /> Excluir
-          </button>
-          </div>
+        >
+          <FiTrash2 /> Excluir
+        </Button>
+      </div>
     </div>
   );
 }

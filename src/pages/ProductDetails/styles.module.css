@@ -1,4 +1,7 @@
-.page { max-width: 900px; margin: 0 auto; }
+.page { 
+  max-width: 900px; 
+  margin: 0 auto; 
+}
 
 .topBar {
   display: flex;
@@ -56,8 +59,13 @@
   color: var(--text-secondary);
 }
 
-.star { color: var(--brand-secondary); }
-.ratingCount { color: var(--text-muted); }
+.star { 
+  color: var(--brand-secondary); 
+}
+
+.ratingCount { 
+  color: var(--text-muted); 
+}
 
 .price {
   font-size: 28px;

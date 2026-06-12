@@ -30,7 +30,9 @@
   transition: transform var(--transition);
 }
 
-.card:hover .image { transform: scale(1.04); }
+.card:hover .image { 
+  transform: scale(1.04); 
+}
 
 .body {
   padding: 14px 16px;
@@ -52,7 +54,9 @@
   cursor: pointer;
 }
 
-.title:hover { color: var(--brand-primary); }
+.title:hover { 
+  color: var(--brand-primary); 
+}
 
 .meta {
   display: flex;
@@ -82,49 +86,14 @@
 
 .actions {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   padding: 16px;
   border-top: 1px solid var(--border-color);
   background: var(--bg-surface);
 }
 
-.actionBtn {
+.actions button {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all var(--transition);
-  border: 2px solid transparent;
-}
-
-.editBtn {
-  background-color: transparent;
-  color: var(--brand-primary);
-  border-color: var(--brand-primary);
-}
-
-.editBtn:hover {
-  background-color: var(--brand-primary);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
-}
-
-.deleteBtn {
-  background-color: transparent;
-  color: var(--color-danger);
-  border-color: var(--color-danger);
-}
-
-.deleteBtn:hover {
-  background-color: var(--color-danger);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  padding: 8px 4px;
+  font-size: 13px;
 }

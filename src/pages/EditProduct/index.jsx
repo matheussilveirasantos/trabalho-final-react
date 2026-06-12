@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { getProduct, updateProduct, getCategories } from "../../services/api";
 import Loader from "../../components/Loader";
+import Button from "../../components/Button/Button";
 import { FiArrowLeft, FiSave } from "react-icons/fi";
 import styles from "./styles.module.css";
 
@@ -80,12 +81,9 @@ export default function EditProduct() {
   return (
     <div className={styles.page}>
       <div className={styles.topBar}>
-        <button
-          className={`btn ${styles.btnOutline}`}
-          onClick={() => navigate("/products")}
-        >
+        <Button variant="secondary" onClick={() => navigate("/products")}>
           <FiArrowLeft /> Voltar
-        </button>
+        </Button>
         <h2 className={styles.pageTitle}>Editar Produto #{id}</h2>
       </div>
 
@@ -176,23 +174,21 @@ export default function EditProduct() {
           </div>
 
           <div className={styles.formActions}>
-            <button
+            {/* Trocamos a tag <button> pelo componente <Button /> da equipe */}
+            <Button
               type="button"
-              className={`btn ${styles.btnOutline}`}
+              variant="secondary" // Isso vai dar o contorno neutro que criamos
               onClick={(e) => {
-                e.preventDefault(); // Impede qualquer interferência do formulário
+                e.preventDefault();
                 navigate(`/products/${id}`);
               }}
             >
               Ver Detalhes
-            </button>
-            <button
-              type="submit"
-              className={`btn ${styles.btnSave}`}
-              disabled={saving}
-            >
+            </Button>
+
+            <Button type="submit" variant="default" disabled={saving}>
               <FiSave /> {saving ? "Salvando..." : "Salvar Alterações"}
-            </button>
+            </Button>
           </div>
         </form>
       </div>
