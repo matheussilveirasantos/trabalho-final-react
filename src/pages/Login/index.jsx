@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -49,7 +49,7 @@ export default function Login() {
 
       <div className={styles.card}>
         <div className={styles.top}>
-          <span className={styles.logoIcon}>🛒</span>
+          <span className={styles.logoIcon}>🛍️</span>
           <h1 className={styles.title}>Loja 34</h1>
           <p className={styles.subtitle}>Entre na sua conta para continuar</p>
         </div>
