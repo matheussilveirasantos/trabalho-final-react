@@ -62,7 +62,7 @@ Siga os passos abaixo para testar o projeto no seu computador:
 
 1. Faça o clone deste repositório:
 ```bash
-git clone https://github.com[seu-usuario]/[seu-repositorio].git
+git clone https://github.com/matheussilveirasantos/trabalho-final-react.git
 ```
 
 2. Entre na pasta do projeto:
