@@ -1,16 +1,20 @@
+/**
+ * INFRAESTRUTURA: AppRoutes - rotas da aplicação
+ * FUNÇÃO: (Path) caminhos (URLs) do sistema, isola as páginas públicas, protege as rotas privadas 
+ * UTILIZOU:
+ * - Rotas (Routes, Route) publicas e privadas, para mapeamento de caminhos estáticos e dinâmicos (/:id).
+ * - Rota curinga (path="*") par direcionar a pagina de erro (404)
+ */
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import ProtectedRoute from '../components/ProtectedRoute/ProtectedRoute';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Login from '../pages/Login';
-import Register from '../pages/Register';
 import Products from '../pages/Products';
 import ProductDetails from '../pages/ProductDetails';
 import AddProduct from '../pages/AddProduct';
 import EditProduct from '../pages/EditProduct';
-import Users from '../pages/Users';
-import UserDetails from '../pages/UserDetails';
 import NotFound from '../pages/NotFound';
 import styles from './AppRoutes.module.css';
 
@@ -40,20 +44,14 @@ export default function AppRoutes() {
     <Routes>
   
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-
    
       <Route path="/" element={<Protected><Products /></Protected>} />
-
   
       <Route path="/products" element={<Protected><Products /></Protected>} />
       <Route path="/products/add" element={<Protected><AddProduct /></Protected>} />
       <Route path="/products/edit/:id" element={<Protected><EditProduct /></Protected>} />
       <Route path="/products/:id" element={<Protected><ProductDetails /></Protected>} />
 
-      <Route path="/users" element={<Protected><Users /></Protected>} />
-      <Route path="/users/register" element={<Protected><Register /></Protected>} />
-      <Route path="/users/:id" element={<Protected><UserDetails /></Protected>} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

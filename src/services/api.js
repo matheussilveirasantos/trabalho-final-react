@@ -1,3 +1,10 @@
+/**
+ * INFRAESTRUTURA: AppRoutes (Arquiteto de Rotas e Layout Coesivo)
+ * FUNÇÃO: (Path) caminhos (URLs) do sistema, isola as páginas públicas, protege as rotas privadas 
+ * UTILIZOU:
+ * - Rotas (Routes, Route) publicas e privadas, para mapeamento de caminhos estáticos e dinâmicos (/:id).
+ * - Rota curinga (path="*") par direcionar a pagina de erro (404)
+ */
 import axios from 'axios';
 
 const api = axios.create({
@@ -15,12 +22,3 @@ export const deleteProduct = (id) => api.delete(`/products/${id}`);
 
 export const loginUser = (credentials) => api.post('/auth/login', credentials);
 
-export const getCarts = () => api.get('/carts');
-export const getCart = (id) => api.get(`/carts/${id}`);
-
-export default api;
-export const getUsers = () => api.get('/users');
-export const getUser = (id) => api.get(`/users/${id}`);
-export const createUser = (data) => api.post('/users', data);
-export const updateUser = (id, data) => api.put(`/users/${id}`, data);
-export const deleteUser = (id) => api.delete(`/users/${id}`);
