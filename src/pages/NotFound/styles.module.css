@@ -1,0 +1,35 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 12px;
+  text-align: center;
+  padding: 40px;
+}
+
+.icon {
+  font-size: 48px;
+  color: var(--color-warning);
+}
+
+.code {
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--brand-primary);
+  line-height: 1;
+}
+
+.message {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  max-width: 360px;
+  margin-bottom: 8px;
+}

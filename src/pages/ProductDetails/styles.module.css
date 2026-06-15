@@ -1,0 +1,137 @@
+.page { 
+  max-width: 900px; 
+  margin: 0 auto; 
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  box-shadow: var(--shadow-md);
+}
+
+.imageSection {
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 360px;
+}
+
+.image {
+  max-height: 280px;
+  width: auto;
+  object-fit: contain;
+}
+
+.info {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.star { 
+  color: var(--brand-secondary); 
+}
+
+.ratingCount { 
+  color: var(--text-muted); 
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.priceUsd {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: -8px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 4px 0;
+}
+
+.descTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.meta {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.error {
+  color: var(--color-danger);
+  padding: 24px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .card { grid-template-columns: 1fr; }
+  .imageSection { min-height: 220px; }
+}
